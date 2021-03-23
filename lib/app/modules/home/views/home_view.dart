@@ -12,12 +12,28 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  bool _snap = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       resizeToAvoidBottomInset: false,
-      body: getBody(),
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            forceElevated: false,
+            snap: _snap,
+            backgroundColor: Colors.red,
+            flexibleSpace: const FlexibleSpaceBar(
+              title: Text('Netflix'),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: getBody(),
+          )
+        ],
+      ),
     );
   }
 
@@ -45,8 +61,10 @@ class _HomeViewState extends State<HomeView> {
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: List.generate(controller.movieCollections.length, (index) {
-                              return HorizontalList(controller.movieCollections[index]);
+                            children: List.generate(
+                                controller.movieCollections.length, (index) {
+                              return HorizontalList(
+                                  controller.movieCollections[index]);
                             }),
                           ),
                         ],

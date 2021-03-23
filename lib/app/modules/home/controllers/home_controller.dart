@@ -21,7 +21,7 @@ class HomeController extends GetxController {
 
   void loadMovieCollection() async {
     isLoading(true);
-    await Future.delayed(const Duration(milliseconds: 3000), () {
+    await Future.delayed(const Duration(milliseconds: 100), () {
       print('Hello, world');
     });
     final result = await _movieRepo.getMovieCollection();
