@@ -20,18 +20,18 @@ class _HorizontalListState extends State<HorizontalList> {
           padding: const EdgeInsets.only(left: 15, right: 15),
           child: Text(
             widget.movieCollection.title,
-            style: TextStyle(
+            style: const TextStyle(
                 fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: GestureDetector(
               onTap: () {
-                print("===비디오 클릭");
+                print('===비디오 클릭');
               },
               child: Padding(
                   padding: const EdgeInsets.only(left: 10, bottom: 30),
@@ -39,7 +39,7 @@ class _HorizontalListState extends State<HorizontalList> {
                     children: List.generate(widget.movieCollection.list.length,
                         (index) {
                       return Container(
-                        margin: EdgeInsets.only(right: 8),
+                        margin: const EdgeInsets.only(right: 8),
                         width: 110,
                         height: 160,
                         decoration: BoxDecoration(

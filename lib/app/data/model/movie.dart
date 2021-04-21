@@ -18,13 +18,13 @@ class MovieCollection {
   List<Movie> list;
 
   factory MovieCollection.fromJson(Map<String, dynamic> json) => MovieCollection(
-    title: json["title"],
-    list: List<Movie>.from(json["list"].map((x) => Movie.fromJson(x))),
+    title: json['title'],
+    list: List<Movie>.from(json['list'].map((x) => Movie.fromJson(x))),
   );
 
   Map<String, dynamic> toJson() => {
-    "title": title,
-    "list": List<dynamic>.from(list.map((x) => x.toJson())),
+    'title': title,
+    'list': List<dynamic>.from(list.map((x) => x.toJson())),
   };
 }
 
@@ -36,10 +36,10 @@ class Movie {
   String img;
 
   factory Movie.fromJson(Map<String, dynamic> json) => Movie(
-    img: json["img"],
+    img: json['img'],
   );
 
   Map<String, dynamic> toJson() => {
-    "img": img,
+    'img': img,
   };
 }

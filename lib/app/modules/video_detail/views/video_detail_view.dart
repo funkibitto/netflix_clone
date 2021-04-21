@@ -10,10 +10,10 @@ class VideoDetailView extends GetView<VideoDetailController> {
     return Scaffold(
       backgroundColor: Colors.cyanAccent,
       appBar: AppBar(
-        title: Text('VideoDetailView'),
+        title: const Text('VideoDetailView'),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           'VideoDetailView is working',
           style: TextStyle(fontSize: 20),

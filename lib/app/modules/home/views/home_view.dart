@@ -12,7 +12,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  bool _snap = false;
+  final bool _snap = false;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class _HomeViewState extends State<HomeView> {
     var size = MediaQuery.of(context).size;
     return Obx(() {
       return controller.isLoading.isTrue
-          ? Center(
+          ? const Center(
               child: CircularProgressIndicator(),
             )
           : Padding(
@@ -56,7 +56,7 @@ class _HomeViewState extends State<HomeView> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           BigBanner(),
-                          SizedBox(
+                          const SizedBox(
                             height: 40,
                           ),
                           Column(

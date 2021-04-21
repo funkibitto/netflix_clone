@@ -16,9 +16,9 @@ class _BigBannerState extends State<BigBanner> {
             children: [
               Container(
                 height: 500,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("assets/images/banner.webp"),
+                        image: AssetImage('assets/images/banner.webp'),
                         fit: BoxFit.cover)),
               ),
               Container(
@@ -36,16 +36,16 @@ class _BigBannerState extends State<BigBanner> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Image.asset(
-                      "assets/images/title_img.webp",
+                      'assets/images/title_img.webp',
                       width: 300,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 8,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Text(
-                        "폭력-스릴러-감옥-부패-범죄-미국작품-영화",
+                        '폭력-스릴러-감옥-부패-범죄-미국작품-영화',
                         style: TextStyle(fontSize: 11, color: Colors.white),
                       ),
                     )
@@ -54,7 +54,7 @@ class _BigBannerState extends State<BigBanner> {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -68,16 +68,16 @@ class _BigBannerState extends State<BigBanner> {
                 child: Container(
                   child: Column(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.add,
                         color: Colors.white,
                         size: 25,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
-                      Text(
-                        "찜하기",
+                      const Text(
+                        '찜하기',
                         style: TextStyle(
                             fontWeight: FontWeight.w600, color: Colors.white),
                       )
@@ -103,16 +103,16 @@ class _BigBannerState extends State<BigBanner> {
                     ),
                     child: Row(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.play_arrow,
                           color: Colors.black,
                           size: 30,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
-                        Text(
-                          "Play",
+                        const Text(
+                          'Play',
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
@@ -131,16 +131,16 @@ class _BigBannerState extends State<BigBanner> {
                 },
                 child: Column(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.info_outline,
                       size: 25,
                       color: Colors.white,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
-                    Text(
-                      "정보",
+                    const Text(
+                      '정보',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         color: Colors.white,

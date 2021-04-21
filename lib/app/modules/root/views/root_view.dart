@@ -42,7 +42,7 @@ class _RootViewState extends State<RootView> {
     var size = MediaQuery.of(context).size;
     return Container(
       height: 80,
-      decoration: BoxDecoration(color: Colors.black),
+      decoration: const BoxDecoration(color: Colors.black),
       child: Padding(
         padding: const EdgeInsets.only(
           left: 20,
@@ -67,7 +67,7 @@ class _RootViewState extends State<RootView> {
                           ? Colors.white
                           : Colors.white.withOpacity(0.5),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Text(

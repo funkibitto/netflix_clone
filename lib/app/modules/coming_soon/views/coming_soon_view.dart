@@ -10,10 +10,10 @@ class ComingSoonView extends GetView<ComingSoonController> {
     return Scaffold(
       backgroundColor: Colors.deepPurple,
       appBar: AppBar(
-        title: Text('ComingSoonView'),
+        title: const Text('ComingSoonView'),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           'ComingSoonView is working',
           style: TextStyle(fontSize: 20),

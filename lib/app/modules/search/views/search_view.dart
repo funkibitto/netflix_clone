@@ -10,10 +10,10 @@ class SearchView extends GetView<SearchController> {
     return Scaffold(
       backgroundColor: Colors.yellow,
       appBar: AppBar(
-        title: Text('SearchView'),
+        title: const Text('SearchView'),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           'SearchView is working',
           style: TextStyle(fontSize: 20),

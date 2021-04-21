@@ -10,10 +10,10 @@ class DownloadView extends GetView<DownloadController> {
     return Scaffold(
       backgroundColor: Colors.pink,
       appBar: AppBar(
-        title: Text('DownloadView'),
+        title: const Text('DownloadView'),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           'DownloadView is working',
           style: TextStyle(fontSize: 20),

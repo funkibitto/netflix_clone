@@ -28,7 +28,7 @@ class HomeController extends GetxController {
     if (result != null) {
       movieCollections = result.obs;
     } else {
-      print("!!!!!!!! No data");
+      print('!!!!!!!! No data');
     }
     isLoading(false);
   }
