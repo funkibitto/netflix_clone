@@ -6,6 +6,7 @@
       prefer_const_declarations: error
       prefer_const_constructors: error
       missing_required_param: error
+      always_use_package_imports: error
 
   linter:
     rules:
@@ -13,4 +14,5 @@
       prefer_const_declarations: true
       prefer_const_constructors: true
       missing_required_param: true
+      always_use_package_imports: true
 

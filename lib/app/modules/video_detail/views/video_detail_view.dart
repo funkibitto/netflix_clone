@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/video_detail_controller.dart';
+import 'package:flutter_yamyam/app/modules/video_detail/controllers/video_detail_controller.dart';
 
 class VideoDetailView extends GetView<VideoDetailController> {
   @override

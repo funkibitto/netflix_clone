@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/coming_soon_controller.dart';
+import 'package:flutter_yamyam/app/modules/coming_soon/controllers/coming_soon_controller.dart';
 
 class ComingSoonView extends GetView<ComingSoonController> {
   @override

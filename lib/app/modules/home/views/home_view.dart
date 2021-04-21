@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_yamyam/app/widgets/big_banner_widget.dart';
 import 'package:flutter_yamyam/app/widgets/horizontal_list_widget.dart';
 import 'package:get/get.dart';
-import '../controllers/home_controller.dart';
+import 'package:flutter_yamyam/app/modules/home/controllers/home_controller.dart';
 
 class HomeView extends StatefulWidget {
   final HomeController homeController = Get.put(HomeController());
@@ -12,7 +12,6 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  final bool _snap = false;
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +20,13 @@ class _HomeViewState extends State<HomeView> {
       resizeToAvoidBottomInset: false,
       body: CustomScrollView(
         slivers: [
-          SliverAppBar(
+          const SliverAppBar(
             forceElevated: false,
-            snap: _snap,
+            pinned: false,
+            floating: true,
+            snap: false,
             backgroundColor: Colors.red,
-            flexibleSpace: const FlexibleSpaceBar(
+            flexibleSpace: FlexibleSpaceBar(
               title: Text('Netflix'),
             ),
           ),
@@ -39,7 +40,7 @@ class _HomeViewState extends State<HomeView> {
 
   Widget getBody() {
     final controller = widget.homeController;
-    var size = MediaQuery.of(context).size;
+    var _size = MediaQuery.of(context).size;
     return Obx(() {
       return controller.isLoading.isTrue
           ? const Center(
@@ -51,7 +52,7 @@ class _HomeViewState extends State<HomeView> {
                 child: Stack(
                   children: [
                     Container(
-                      width: size.height - 80,
+                      width: _size.height - 80,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
